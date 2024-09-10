@@ -2,7 +2,7 @@ name: Daily Run Script
 
 on:
   schedule:
-    - cron: '0 7,8 * * *'  # 在 UTC 时间每天的 7:00 和 8:00 运行 (对应美国东部时间 2:00 和 3:00)
+    - cron: '0 7,8 * * *'  # 在 UTC 时间每天的 7:00 和 8:00 运行 (对应北京时间 15:00 和 16:00)
   workflow_dispatch:  # 添加手动触发选项
 
 jobs:
