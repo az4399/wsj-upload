@@ -19,6 +19,7 @@ jobs:
 
     - name: Copy Python files to home directory
       run: |
+        pip install requests
         cp download.py ~/
         cp upload.py ~/
         cp run.py ~/
