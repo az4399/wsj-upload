@@ -1,3 +1,5 @@
+import requests
+
 def download_pdf():
     # 从api获取pdf文件的地址
     api_url = "https://customercenter.wsj.com/todaysPaper/"
@@ -9,11 +11,6 @@ def download_pdf():
 
     # 从api的header返回的重定向地址中抠出来的，用于保存文件的文件名，同时也用于对比
     save_pdf_name = api_response['Location'].split('/')[-1].split("-", 1)[1]
-
-    # 判断文件是否已经存在, 如果存在则不再下载
-    for local_filename in os.listdir("."):
-        if local_filename == save_pdf_name:
-            return "文件已存在"
 
     # 下载pdf文件
     headers = {
