@@ -5,6 +5,7 @@ def download_pdf():
     api_url = "https://customercenter.wsj.com/todaysPaper/"
     api_response = requests.request("GET", api_url, allow_redirects=False).headers
 
+    print(api_response)
     # 从api的header返回的重定向地址
     url_302 = api_response['Location']
     print(url_302)
